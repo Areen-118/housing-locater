@@ -1,0 +1,24 @@
+<header>
+    <h1> HOME </h1>
+    <input type="text" placeholder="Search by city..."[(ngModel)]="searchCity" class="search-input" />
+</header>
+
+<div class="housing-grid">
+    @for (house of housingList; track house.id) {
+      <div class="main-container" (click)="onHouseClick(house.id)">
+        <div class="house-image">
+          <img [src]="house.photo" alt="House Image" class="house-image" />
+        </div>
+  
+        <h2>{{ house.name }}</h2>
+        <div class="house-city">
+          <p>
+            <i class="ri-map-pin-2-fill"></i>
+            {{ house.city }}, {{ house.state }}
+          </p>
+        </div>
+  
+        <a class="house-link" [routerLink]="['/details', house.id]">Learn More ›</a>
+      </div>
+    }
+  </div>
