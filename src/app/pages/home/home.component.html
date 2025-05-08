@@ -1,12 +1,13 @@
 <header>
+  <h1>{{"home.title" |translate }}</h1>
   <div class="lang-Button">
     <button (click)="changeLanguage('en')">ENGLISH</button>
     <button (click)="changeLanguage('ar')">ARABIC</button>
   </div>
-    <h1>{{"home.title" |translate }}</h1>
-    <input type="text" placeholder="{{ 'home.search-placeholder' | translate }}" [(ngModel)]="searchCity" class="search-input" />
+    
+   
 </header>
-
+<input type="text" placeholder="{{ 'home.search-placeholder' | translate }}" [(ngModel)]="searchCity" class="search-input" />
 <div class="housing-grid">
   @if(this.housingList.length === 0) {<app-not-found [issearchMode]="isSearchMode"></app-not-found>}
   @else{

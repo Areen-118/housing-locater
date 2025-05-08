@@ -1,54 +1,90 @@
 /* home.component.scss */
 
 .housing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-  
-  .main-container {
-    background-color: #f5f3ff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  .main-container:hover {
-    transform: translateY(-5px);
-  }
-  
-  .house-image img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .house-city {
-    padding: 0.5rem 1rem;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .house-link {
-    display: block;
-    padding: 1rem;
-    color: #7c3aed;
-    text-decoration: none;
-    font-weight: 600;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.main-container {
+  background-color: #f5f3ff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.main-container:hover {
+  transform: translateY(-5px);
+}
+
+.house-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.house-city {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  color: #666;
+}
+
+.house-link {
+  display: block;
+  padding: 1rem;
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 600;
+}
 .search-input {
-    width: 100%;
-    max-width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  
 }
 
 .search-input:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+  border-color: #6b21a8;
+  box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+
+  &::placeholder {
+    color: #ded9d9;
+    font-size: 16px;
+    font-weight: 400;
+    transform:translateY(-15px);
+ 
+    
+  }
+ 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5f3ff;
+  border-bottom: 1px solid #ddd;
+}
+.lang-Button button {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: #6b21a8;
+    color: black;
+  }
 }
