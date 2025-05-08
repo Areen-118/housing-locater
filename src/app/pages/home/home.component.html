@@ -1,9 +1,15 @@
 <header>
-    <h1> HOME </h1>
-    <input type="text" placeholder="Search by city..."[(ngModel)]="searchCity" class="search-input" />
+  <div class="lang-Button">
+    <button (click)="changeLanguage('en')">ENGLISH</button>
+    <button (click)="changeLanguage('ar')">ARABIC</button>
+  </div>
+    <h1>{{"home.title" |translate }}</h1>
+    <input type="text" placeholder="{{ 'home.search-placeholder' | translate }}" [(ngModel)]="searchCity" class="search-input" />
 </header>
 
 <div class="housing-grid">
+  @if(this.housingList.length === 0) {<app-not-found [issearchMode]="isSearchMode"></app-not-found>}
+  @else{
     @for (house of housingList; track house.id) {
       <div class="main-container" (click)="onHouseClick(house.id)">
         <div class="house-image">
@@ -18,7 +24,8 @@
           </p>
         </div>
   
-        <a class="house-link" [routerLink]="['/details', house.id]">Learn More ›</a>
+        <a class="house-link" [routerLink]="['/details', house.id]"> {{"home.button-learnmore" |translate}}</a>
       </div>
-    }
+    }}
   </div>
+  

@@ -3,18 +3,22 @@ import { HousingService } from '../../services/housing.service';
 import { House } from '../../model/house.model';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from "../not-found/not-found.component";
+import { TranslatePipe } from '../../pipes/translate.pipe';
+import { I18nService } from '../../services/i18n.service';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink,FormsModule],
+  imports: [RouterLink, FormsModule, NotFoundComponent,TranslatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  isSearchMode: boolean = false;
   housingList: House[] = [];
   house!: House;
   searchCity: string='' ;
-  constructor(private housingService: HousingService, private router: Router) {}
+  constructor(private housingService: HousingService, private router: Router,private langService :I18nService) {}
   ngOnInit() {
     this.loadHousingList();
    
@@ -41,6 +45,7 @@ export class HomeComponent {
           this.housingList = this.housingList.filter((house) =>
             house.city.toLowerCase().includes(searchCity.toLowerCase())
           );
+          this.isSearchMode = true;
         },
         error: (error: Error) => {
           console.error('Error fetching housing data by city:', error);
@@ -50,5 +55,9 @@ export class HomeComponent {
     else {
       this.loadHousingList();
     }
+  }
+  changeLanguage(lang: 'en' | 'ar') {
+   this.langService.loadTranslations(lang);
+   
   }
 }

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { House } from '../../model/house.model';
 import { HousingService } from '../../services/housing.service';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-details',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
 })

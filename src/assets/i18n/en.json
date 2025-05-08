@@ -1,0 +1,18 @@
+{
+  "home": {
+    "title": "Home",
+    "search-placeholder": "search by city",
+    "button-learnmore": "Learn more"
+  },
+  "details": {
+    "Location": "Location",
+    "Avaliable-Units": "Avaliable Units",
+    "Internet-Availability": "Internet Availability",
+    "Landury-Availability": "Landury Availability"
+  },
+  "not-found": {
+    "title": "House Not Available",
+    "title-2": "Page Not Found",
+    "button": "Back to Home"
+  }
+}

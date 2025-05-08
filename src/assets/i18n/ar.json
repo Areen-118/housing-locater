@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "الرئيسية",
+    "search-placeholder": "ابحث عن أي شيء",
+    "button-learnmore": "تعلم المزيد"
+  },
+  "details": {
+    "Location": "الموقع",
+    "Avaliable-Units": "وحدات متاحة",
+    "Internet-Availability": "توفر الإنترنت",
+    "Landury-Availability": "توافر الغسيل"
+  },
+  "not-found": {
+    "title": "المنزل غير متوفر",
+    "title-2": "الصفحة غير موجودة",
+    "button": "العودة إلى الصفحة الرئيسية"
+
+  }
+}

@@ -1,0 +1,6 @@
+
+<img src="/assets/notFound.png" alt="Not Found" class="not-found-image">
+
+<h1>{{issearchMode ?("not-found.title" |translate) : ('not-found.title-2'|translate)}}</h1>
+@if(!issearchMode){
+<button class="button" (click)="goBack()"> {{'not-found.button' | translate}}</button>}

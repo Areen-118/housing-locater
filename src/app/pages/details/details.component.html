@@ -1,10 +1,10 @@
 <div class="details-container">
 <img [src]=" house.photo" alt="House Image" class="house-image">
 <div class="house-detalis">
-<p>name: {{house.name}}</p>
-<p>Location:{{house.city}} / {{house.state}}</p>
-<p> AvaliableUnits :{{house.availableUnits}}</p>
-<p>Internet Availability: {{house.wifi ? ' ✅' : ' ❌'}}</p>
-<p>Landury Availability: {{house.landury ? ' ✅' : ' ❌'}}</p>
+<p> {{house.name}}</p>
+<p>{{"details.Location" | translate}} :{{house.city}} / {{house.state}}</p>
+<p> {{"details.Avaliable-Units" | translate}} :{{house.availableUnits}}</p>
+<p>{{"details.Internet-Availability" | translate}} :{{house.wifi ? ' ✅' : ' ❌'}}</p>
+<p>{{"details.Landury-Availability" | translate}} :{{house.landury ? ' ✅' : ' ❌'}}</p>
 </div>
 </div>  
